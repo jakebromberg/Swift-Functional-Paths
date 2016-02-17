@@ -34,7 +34,7 @@ let path : Path = /modal/tutorial/optInAlert
 
 extension String {
     init<T>(_ path: Path<T>) {
-        self = "/" + "/".join(path.nodes.map { $0.name })
+        self = "/" + path.nodes.map({ $0.name }).joinWithSeparator("/")
     }
 }
 
